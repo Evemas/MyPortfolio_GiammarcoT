@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #0C0C0C;
+    --secondary-color: #FFC107;
+}
+
+
+body {
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+
+.container_navbar{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+a{
+    font-family: 'Cascadia Code', sans-serif;
+    font-weight: bold !important;
+}
+
+
+h1{
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+
+.main{
+    height: 1000px;
+    background-image: url(/media/wallpaperfull-coding.jpg);
+    /* background-color: var(--primary-color); */
+    border-top: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+
+#card1{
+    border-radius: 20px;
+    border: 2px solid var(--secondary-color);
+    width: 1000 px !important;
+    height: 300px !important;
+    background-color: var(--primary-color);
+}
+
+
+#card2{
+    border-radius: 20px;
+    border: 2px solid var(--secondary-color);
+    width: 1000 px !important;
+    height: 300px !important;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    font-family: 'Cascadia Code', sans-serif;
+    background-color: var(--primary-color);
+}
+
+
+#cardp {
+    width: 700px;
+}
+
+
+/* ANIMAZIONE CURSORE */
+#cardp::after {
+    content: "|";
+    animation: blink 0.9s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    25% { opacity: 0; }
+    75% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+.profilephoto{
+    border: 2px solid var(--secondary-color);
+}
+
+
+h3{
+    font-family: 'Cascadia Code', sans-serif;        
+    color: #ffffff;
+    font-size: 25px;              
+}
+
+
+.navClass:hover {
+    color: var(--secondary-color) !important
+    ;
+}
+
+
+.navClass:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transform: translateX(-50%);
+    transition: width 0.25s ease;
+}
+
+
+.navClass:hover:before {
+    width: 100%;
+}
+
+
+header {
+    position: relative;
+}
+
+
+@media (max-width: 768px) {
+    #card1 {
+        width: 50%; 
+        max-width: none;
+    }
+
+    #card2 {
+        font-size: 16px;
+    }
+}
